@@ -3,6 +3,11 @@ http-proxy
 
 Non-blocking HTTP proxy build on top of [Celluloid](https://github.com/celluloid/celluloid-io/).
 
+## Features
+
+* simple HTTP Cache, considers only `Cashe-Control: max-age=ttl`
+* proxying HTTP requests (no HTTPS)
+
 ## Usage
 
 Install dependencies:
