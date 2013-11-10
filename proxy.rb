@@ -19,19 +19,19 @@ loglevels = {
 OptionParser.new do |opts|
   opts.banner = 'Usage: proxy.rb [options]'
 
-  opts.on('--host HOSTNAME', 'Host') do |h|
+  opts.on('--host HOSTNAME', 'Host [127.0.0.1]') do |h|
     options.host = h
   end
 
-  opts.on('--port N', Integer, 'Port') do |p|
+  opts.on('--port N', Integer, 'Port [3000]') do |p|
     options.port = p
   end
 
-  opts.on('--backends x,y,z', Array, 'Comma separated list of backends') do |b|
+  opts.on('--backends host:3001,...', Array, 'Comma separated list of backends [127.0.0.1:3001]') do |b|
     options.backends = b
   end
 
-  opts.on('--loglevel DEBUG/INFO/WARN', 'Logging level') do |l|
+  opts.on('--loglevel DEBUG/INFO/WARN', 'Logging level [DEBUG]') do |l|
     options.loglevel = loglevels[l] || options.loglevel
   end
 
